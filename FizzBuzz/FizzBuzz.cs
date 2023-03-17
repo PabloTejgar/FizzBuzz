@@ -6,19 +6,21 @@
         {
         }
 
+        private Dictionary<int,string> Rules = new Dictionary<int,string>()
+        {
+            {15, "FizzBuzz"},
+            {3, "Fizz"},
+            {5, "Buzz"},
+        };
+
         public string FizzBuzz(int number)
         {
-            if(number %3 == 0 && number %5 == 0)
+            foreach(var key in Rules.Keys)
             {
-                return "FizzBuzz";
-            }
-            if(number % 3 == 0)
-            {
-                return "Fizz";
-            }
-            if (number % 5 == 0)
-            {
-                return "Buzz";
+                if(number % key == 0)
+                {
+                    return Rules[key];
+                }
             }
             return number.ToString();
         }
