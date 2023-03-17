@@ -1,16 +1,16 @@
 ﻿using NUnit.Framework;
 
-namespace FizzBuzz.Test
+namespace FizzBuzzKata.Test
 {
     public class FizzBuzzTest
     {
         [Test]
         [TestCase(1,"1")]
-        [TestCase(2, "1")]
-        [TestCase(4, "1")]
-        public void AddANonMultipleReturnsTheNumber()
+        [TestCase(2, "2")]
+        [TestCase(4, "4")]
+        public void AddANonMultipleReturnsTheNumber(int input, string expected)
         {
-            var generator = new FizzBuzz();
+            var generator = new FizzBuzzKata();
             Assert.AreEqual(generator.FizzBuzz(input), expected);
         }
 
