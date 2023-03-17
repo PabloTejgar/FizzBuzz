@@ -14,5 +14,15 @@ namespace FizzBuzzKata.Test
             Assert.AreEqual(generator.FizzBuzz(input), expected);
         }
 
+        [Test]
+        [TestCase(3, "Fizz")]
+        [TestCase(6, "Fizz")]
+        [TestCase(9, "Fizz")]
+        public void AddMultiple3ReturnsFizz(int input, string expected)
+        {
+            var generator = new FizzBuzzKata();
+            Assert.AreEqual(generator.FizzBuzz(input), expected);
+        }
+
     }
 }
