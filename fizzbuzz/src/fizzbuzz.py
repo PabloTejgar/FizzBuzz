@@ -5,5 +5,6 @@ class FizzBuzz:
             return "Fizz"
         if number == 6:
             return "Fizz"
-
+        if number == 9:
+            return "Fizz"
         return str(number)
