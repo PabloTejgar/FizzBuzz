@@ -1,18 +1,14 @@
+import pytest
+
 from src.fizzbuzz import FizzBuzz
 
 
 class TestFizzBuzz:
 
-    def test_first_number_is_returned(self):
+    @pytest.mark.parametrize("test_input,expected", [(1, "1"), (2, "2"), (4, "4")])
+    def test_number_is_returned(self, test_input, expected):
 
         fizzbuzz_processor = FizzBuzz()
-        assert "1" == fizzbuzz_processor.process(1)
+        assert expected == fizzbuzz_processor.process(test_input)
 
-    def test_second_number_is_returned(self):
-        fizzbuzz_processor = FizzBuzz()
-        assert "2" == fizzbuzz_processor.process(2)
-
-    def test_fourth_number_is_returned(self):
-        fizzbuzz_processor = FizzBuzz()
-        assert "4" == fizzbuzz_processor.process(4)
 
