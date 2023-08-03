@@ -11,4 +11,11 @@ class TestFizzBuzz:
         fizzbuzz_processor = FizzBuzz()
         assert expected == fizzbuzz_processor.process(test_input)
 
+    def test_three_provided_then_fizz_returned(self):
+
+        fizzbuzz_processor = FizzBuzz()
+        assert "Fizz" == fizzbuzz_processor.process(3)
+
+
+
 
