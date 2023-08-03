@@ -17,10 +17,20 @@ class TestFizzBuzz:
         fizzbuzz_processor = FizzBuzz()
         assert expected == fizzbuzz_processor.process(test_input)
 
-    def test_fizzbuzz_is_returned(self, test_input, expected):
+    def test_fizzbuzz_is_returned(self):
 
         fizzbuzz_processor = FizzBuzz()
         assert "FizzBuzz" == fizzbuzz_processor.process(15)
+
+    def test_30_then_fizzbuzz_is_returned(self):
+
+        fizzbuzz_processor = FizzBuzz()
+        assert "FizzBuzz" == fizzbuzz_processor.process(30)
+
+    def test_45_then_fizzbuzz_is_returned(self):
+
+        fizzbuzz_processor = FizzBuzz()
+        assert "FizzBuzz" == fizzbuzz_processor.process(45)
 
 
 
