@@ -16,6 +16,11 @@ class TestFizzBuzz:
         fizzbuzz_processor = FizzBuzz()
         assert "Fizz" == fizzbuzz_processor.process(3)
 
+    def test_six_provided_then_fizz_returned(self):
+
+        fizzbuzz_processor = FizzBuzz()
+        assert "Fizz" == fizzbuzz_processor.process(6)
+
 
 
 
