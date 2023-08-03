@@ -41,7 +41,7 @@ bld/
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 
-# MSTest test Results
+# MSTest tests Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
@@ -312,7 +312,7 @@ paket-files/
 # CodeRush personal settings
 .cr/personal
 
-# Python Tools for Visual Studio (PTVS)
+# python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
 
