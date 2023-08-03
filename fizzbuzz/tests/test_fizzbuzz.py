@@ -11,20 +11,12 @@ class TestFizzBuzz:
         fizzbuzz_processor = FizzBuzz()
         assert expected == fizzbuzz_processor.process(test_input)
 
-    def test_three_provided_then_fizz_returned(self):
+    @pytest.mark.parametrize("test_input,expected", [(3, "Fizz"), (6, "Fizz"), (9, "Fizz"), (12, "Fizz")])
+
+    def test_multiple_of_three_provided_then_fizz_returned(self, test_input, expected):
 
         fizzbuzz_processor = FizzBuzz()
-        assert "Fizz" == fizzbuzz_processor.process(3)
-
-    def test_six_provided_then_fizz_returned(self):
-
-        fizzbuzz_processor = FizzBuzz()
-        assert "Fizz" == fizzbuzz_processor.process(6)
-
-    def test_nine_provided_then_fizz_returned(self):
-
-        fizzbuzz_processor = FizzBuzz()
-        assert "Fizz" == fizzbuzz_processor.process(9)
+        assert expected == fizzbuzz_processor.process(test_input)
 
 
 
