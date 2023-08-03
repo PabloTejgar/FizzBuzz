@@ -18,5 +18,12 @@ class TestFizzBuzz:
         fizzbuzz_processor = FizzBuzz()
         assert expected == fizzbuzz_processor.process(test_input)
 
+    @pytest.mark.parametrize("test_input,expected", [(5, "Buzz"), (10, "Buzz"), (20, "Buzz"), (25, "Buzz")])
+
+    def test_multiple_of_five_provided_then_buzz_returned(self, test_input, expected):
+
+        fizzbuzz_processor = FizzBuzz()
+        assert expected == fizzbuzz_processor.process(test_input)
+
 
 
